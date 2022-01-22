@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact us</title>
+    <link rel="stylesheet" type="text/css" href="stylee cont.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="contact-box">
+            <div class="left">
+                <h3>
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    HELPLINE: +91-11-30403040
+                </h3>
+            </div>
+            <div class="right">
+                <h2>Contact Us</h2>
+                <hr>
+
+                <p>Max Clinic is always looking to make things easier for you. Our aim is to provide our customers
+                    with the best medical facilities, constant care, and reliable support.
+                </p>
+                <br>
+                <br>
+                <input type="text" class="field" id="name" placeholder="Full Name *" required>
+                <input type="text" class="field" id="email" placeholder="Email *">
+                <input type="text" class="field" id="mobile" placeholder="Mobile no.*" required>
+
+                <select class="form-select" id="city" name="city" required="true">
+                    <option disabled selected>-Select Your City- *</option>
+                    <option>Ahmedabad</option>
+                    <option>Ambala</option>
+                    <option>Amritsar</option>
+                    <option>Bengaluru</option>
+                    <option>Bhopal</option>
+                    <option>Bhubaneswar</option>
+                    <option>Chandigarh</option>
+                    <option>Chennai</option>
+                    <option>Dehradun</option>
+                    <option>Delhi</option>
+                    <option>Dhanbad</option>
+                    <option>Faridabad</option>
+                    <option>Ghaziabad</option>
+                    <option>Greater Noida</option>
+                    <option>Gurgaon</option>
+                    <option>Hyderabad</option>
+                    <option>Indore</option>
+                    <option>Jaipur</option>
+                    <option>Jalandhar</option>
+                    <option>Kolkata</option>
+                    <option>Kurnool</option>
+                    <option>Lucknow</option>
+                    <option>Ludhiana</option>
+                    <option>Mohali</option>
+                    <option>Mumbai</option>
+                    <option>Noida</option>
+                    <option>Panchkula</option>
+                    <option>Panipat</option>
+                    <option>Patiala</option>
+                    <option>Patna</option>
+                    <option>Pune</option>
+                    <option>Raipur</option>
+                    <option>Ranchi</option>
+                    <option>Rohtak</option>
+                    <option>Sonipat</option>
+                    <option>Surat</option>
+                    <option>Udaipur</option>
+                </select>
+                <br>
+
+
+                <textarea placeholder="Message *" id="mssg" class="field" required></textarea>
+
+                <br>
+                <a class="btn btn-info" id="send" onclick="message()">SEND</a>
+
+                <div class="message">
+                    <div class="success" id="success">
+                        Your Message Successfully Sent!
+                    </div>
+                    <div class="danger" id="danger">Feilds Can't be Empty!</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="cont.js"></script>
+
+
+
+
+
+</body>
+
+</html>
