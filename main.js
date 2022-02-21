@@ -5,6 +5,7 @@ let patientName = document.querySelector('#patient-name');
 let contact = document.querySelector('#contact');
 let date = document.querySelector('#date');
 let time = document.querySelector('#time');
+let department= document.querySelector('#department');
 let symptoms = document.querySelector('#symptoms');
 let consultations = document.querySelector('#consultations');
 let services = document.querySelector('#services');
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
           objectStore.createIndex('contact', 'contact', { unique: false });
           objectStore.createIndex('date', 'date', { unique: false });
           objectStore.createIndex('time', 'time', { unique: false });
+          objectStore.createIndex('department', 'department', { unique: false });
           objectStore.createIndex('symptoms', 'symptoms', { unique: false });
 
           //console.log('Database ready and fields created!');
@@ -50,10 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
           e.preventDefault();
           let newConsultation = {
                patientname: patientName.value,
-
+               
                contact: contact.value,
                date: date.value,
                time: time.value,
+               department: department.value,
                symptoms: symptoms.value
           }
 
@@ -96,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                           <p class="font-weight-bold">Contact:  <span class="font-weight-normal">${cursor.value.contact}<span></p>
                          <p class="font-weight-bold">Date:  <span class="font-weight-normal">${cursor.value.date}<span></p>
                          <p class="font-weight-bold">Time:  <span class="font-weight-normal">${cursor.value.time}<span></p>
+                         <p class="font-weight-bold">Department:  <span class="font-weight-normal">${cursor.value.department}<span></p>
                          <p class="font-weight-bold">Symptoms:  <span class="font-weight-normal">${cursor.value.symptoms}<span></p>
                      `;
 
@@ -148,11 +152,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     consultations.appendChild(noSchedule);
                } else {
-                    services.textContent = 'Cancel your app'
+                    services.textContent = 'Cancel your consultation'
                }
           }
      }
 
 });
-
 
