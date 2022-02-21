@@ -3,7 +3,6 @@
 
 <head>
     <title>Docter appointment</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="style.css">
@@ -18,12 +17,8 @@
     <nav class="navbar navbar-expand-lg nav-back fixed-top" id="mainNav">
 
         <div class="container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="20" fill="#CC5500" class="bi bi-plus"
-                viewBox="0 0 16 16">
-                <path
-                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-            </svg>
-            <a class="navbar-brand" href="#"><img src="https://maxhospitalindia.com/wp-content/uploads/2020/08/max-new-logo.png" class="img2"> </a>
+
+            <a class="navbar-brand" href="#"><img src="file:///C:/Users/soura/Pictures/max-logo.png" class="img2"> </a>
 
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -31,30 +26,76 @@
 
             </button>
 
+
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">Docter</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="#">Patient</button></li>
-
-
-
-
-
-
-
-
-
-
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Specialities</a></li>
 
 
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact us</a></li>
                 </ul>
             </div>
         </div>
+        <div class="dropdown">
+            <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                aria-expanded="false">
+                Login Portal
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#" class="button" id="button">Docter</a>
+
+                <a class="dropdown-item" href="#" class="btn" id="btn">Patient</a>
+
+            </div>
+        </div>
+
+        <div class="popup">
+            <div class="popup-content">
+                <img src="file:///C:/Users/soura/Pictures/close-icon-png-9.jpg" alt="close" class="close">
+
+                <input type="text" placeholder="emailid">
+
+
+                <input type="password" placeholder="password">
+                
+                <a href="#">
+                    <input type="button" value="Login">
+                </a>
+
+            </div>
+
+        </div>
+        <script>
+            document.getElementById("button").addEventListener("click", function () {
+                document.querySelector(".popup").style.display = "flex";
+            })
+
+            document.querySelector(".close").addEventListener("click", function () {
+                document.querySelector(".popup").style.display = "none";
+            })
+
+
+        </script>
+
+        <script>
+            document.getElementById("btn").addEventListener("click", function () {
+                document.querySelector(".popup").style.display = "flex";
+            })
+
+            document.querySelector(".close").addEventListener("click", function () {
+                document.querySelector(".popup").style.display = "none";
+            })
+
+
+        </script>
+
+
     </nav>
+
+
+
 
     <br><br>
     <!--banner section-->
@@ -63,8 +104,9 @@
         <marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="8"> <span
                 class="badge badge-secondary">New</span><img src="https://www.aiimsexams.ac.in/images/new.gif"
                 width="30" height="15"> Complete Hemogram, Kidney&Lever Function Test, Blood Glucose Fasting, Lipid
-            Profile, Urine Routine &
-            Microscopy Extended @ Rs.<sub><s>4000/-</s></sub> <strong><dfn>1000/-</dfn></strong> </marquee>
+            Profile, Urine Routine & Microscopy Extended @ Rs.<sub><s>4000/-</s></sub>
+            <strong><dfn>1000/-</dfn></strong>
+        </marquee>
     </h5>
     <!--banner section-->
     <div class="container mt-4 p-4">
@@ -97,7 +139,7 @@
                             Date
                         </label>
                         <div class="col-sm-8 col-lg-8">
-                            <input type="date" id="date" class="form-control">
+                            <input type="date" id="date" class="form-control" required>
                         </div>
                     </div>
                     <!---->
@@ -106,9 +148,59 @@
                             Time
                         </label>
                         <div class="col-sm-8 col-lg-8">
-                            <input type="time" id="time" class="form-control">
+                            <input type="time" id="time" class="form-control" required>
                         </div>
                     </div>
+                    <!---->
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4">
+                            Department
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+
+                            <select class="form-select" id="department" name="department" required="true">
+                                <option selected>--Select Specialities--</option>
+                                <option>Anaesthesiology</option>
+                                <option>Bariatric &amp; Metabolic Surgery</option>
+                                <option>Blood Bank</option>
+                                <option>Cardiology &amp; CTVS</option>
+                                <option>Dentistry</option>
+                                <option>Dermatology</option>
+                                <option>Endocrinology And Diabetes</option>
+                                <option>ENT &amp; Cochlear Implant</option>
+                                <option>Gastroenterology &amp; Gastro Surgery</option>
+                                <option>Haemotology</option>
+                                <option>Holistic Medicine</option>
+                                <option>Homeopathy</option>
+                                <option>Internal Medicine</option>
+                                <option>Interventional Radiology</option>
+                                <option>IVF</option>
+                                <option>Laboratory</option>
+                                <option>Laparoscopic &amp; General Surgery</option>
+                                <option>Liver Transplant</option>
+                                <option>Nephrology &amp; Renal Transplant</option>
+                                <option>Neurosciences</option>
+                                <option>Nutrition &amp; Health</option>
+                                <option>Obstetrics and Gynaecology</option>
+                                <option>Oncology &amp; Onco Surgery</option>
+                                <option>Ophthalmology, Metro Eye Centre</option>
+                                <option>Orthopaedics, Joint Replacement &amp; Spine Surgery</option>
+                                <option>Paediatrics &amp; Neonatology</option>
+                                <option>Physiotherapy</option>
+                                <option>Plastic, Cosmetic &amp; Reconstructive Surgery</option>
+                                <option>Psychiatry</option>
+                                <option>Psychology</option>
+                                <option>Pulmonology &amp; Sleep Medicine</option>
+                                <option>Radiology</option>
+                                <option>Rheumatology</option>
+                                <option>Stem Cell Therapy</option>
+                                <option>Urology</option>
+
+                            </select>
+                        </div>
+                    </div>
+
                     <!---->
                     <div class="form-group row">
                         <label class="col-sm-4 col-lg-4">
@@ -142,6 +234,7 @@
 
 
 
+
     <!-- Footer-->
     <footer class="footer py-4 mt-5">
         <div class="container">
@@ -149,7 +242,8 @@
                 <div class="col-lg-4 text-lg-left"> © Max Healthcare, 2022, All rights reserved</div>
                 <div class="col-lg-4 my-3 my-lg-0">
                     <p> Follow us on</p>
-                    <a href="#"> <i class="fa fa-facebook" style="font-size:30px; margin-right: 10px; color:rgb(0, 38, 255);"></i></a>
+                    <a href="#"> <i class="fa fa-facebook"
+                            style="font-size:30px; margin-right: 10px; color:rgb(0, 38, 255);"></i></a>
 
                     <a href="#"> <i class="fa fa-youtube" style="font-size:30px; margin-right: 10px; color:red"></i></a>
                     <a href="#"> <i class="fa fa-twitter" style="font-size:30px; "></i></a>
